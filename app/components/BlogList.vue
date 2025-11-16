@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { COURSES } from "@/constants/course";
-const blogs = computed(() => {
+import { COURSES } from "~/constants";
+const courses = computed(() => {
   return COURSES.map((item, index) => {
     return {
       ...item,
@@ -12,7 +12,9 @@ const blogs = computed(() => {
   });
 });
 </script>
-
 <template>
-  <UBlogPosts :posts="blogs" />
+  <UContainer class="py-10 flex flex-col gap-4">
+    <h1 class="text-2xl font-bold">บทเรียน</h1>
+    <UBlogPosts :posts="courses" />
+  </UContainer>
 </template>

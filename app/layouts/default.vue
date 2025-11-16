@@ -1,11 +1,9 @@
+<script setup lang="ts"></script>
+
 <template>
-  <div>
+  <UContainer class="max-w-dvw px-0!">
     <AppHeader />
-
-    <UMain>
-      <slot />
-    </UMain>
-
+    <slot />
     <AppFooter />
-  </div>
+  </UContainer>
 </template>

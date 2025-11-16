@@ -1,75 +1,31 @@
-<script setup lang="ts">
-const route = useRoute();
-
-const items = computed(() => [
-  {
-    label: "หน้าหลัก",
-    to: "/",
-    active: route.path === "/",
-  },
-  {
-    label: "บทเรียน",
-    to: "/course",
-    active: route.path === "/course",
-  },
-]);
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <UHeader>
-    <template #left>
-      <NuxtLink to="/">
-        <NuxtImg
-          src="https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/logo.png"
-          class="w-10 h-10 rounded"
-        />
-      </NuxtLink>
-    </template>
-
-    <UNavigationMenu :items="items" variant="link" />
-
-    <template #right>
-      <UColorModeButton />
-
-      <!-- <UButton
-        icon="i-lucide-log-in"
-        color="neutral"
-        variant="ghost"
-        to="/login"
-        class="lg:hidden"
-      />
-
-      <UButton
-        label="Sign in"
-        color="neutral"
-        variant="outline"
-        to="/login"
-        class="hidden lg:inline-flex"
-      />
-
-      <UButton
-        label="Sign up"
-        color="neutral"
-        trailing-icon="i-lucide-arrow-right"
-        class="hidden lg:inline-flex"
-        to="/signup"
-      /> -->
-    </template>
-
-    <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
-
-      <!-- <USeparator class="my-6" />
-
-      <UButton
-        label="Sign in"
-        color="neutral"
-        variant="subtle"
-        to="/login"
-        block
-        class="mb-3"
-      />
-      <UButton label="Sign up" color="neutral" to="/signup" block /> -->
-    </template>
-  </UHeader>
+  <div
+    class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10"
+  >
+    <UNavigationMenu
+      :items="[
+        {
+          label: 'หน้าหลัก',
+          to: '/',
+        },
+        {
+          label: 'บทเรียน',
+          to: '/courses',
+        },
+      ]"
+      variant="link"
+      color="neutral"
+      class="bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
+      :ui="{
+        link: 'px-2 py-1',
+        linkLeadingIcon: 'hidden',
+      }"
+    >
+      <template #list-trailing>
+        <ColorModeButton />
+      </template>
+    </UNavigationMenu>
+  </div>
 </template>

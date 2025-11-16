@@ -1,14 +1,14 @@
 export const COURSES = [
   {
     title: "การหาจำนวนที่เหลือ",
-    to: "/course/lesson1",
+    to: "/courses/lesson1",
   },
   {
     title: "การเปรียบเทียบหาความแตกต่าง",
-    to: "/course/lesson2",
+    to: "/courses/lesson2",
   },
   {
     title: "การหาจำนวนที่ต้องหามาเพิ่ม",
-    to: "/course/lesson3",
+    to: "/courses/lesson3",
   },
 ];
