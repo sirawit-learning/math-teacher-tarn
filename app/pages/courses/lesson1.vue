@@ -84,12 +84,12 @@ useSeoMeta({
             </h3>
             <UCard
               :ui="{
-                root: 'max-w-[1024px]! aspect-video',
+                root: 'max-w-[1024px]! h-[60dvh] sm:aspect-video',
                 body: 'p-0!',
               }"
             >
               <iframe
-                class="aspect-video"
+                class="h-[60dvh] sm:aspect-video"
                 src="https://padlet.com/yamjard_53p/padlet-413qunjz75h2rwdw"
                 frameborder="0"
                 allowfullscreen
