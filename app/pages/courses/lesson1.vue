@@ -57,6 +57,8 @@ useSeoMeta({
                 src="https://www.youtube.com/embed/t53KgHEvBrA"
                 frameborder="0"
                 allowfullscreen
+                width="100%"
+                height="100%"
               ></iframe>
             </UCard>
           </div>
@@ -91,6 +93,8 @@ useSeoMeta({
                 src="https://padlet.com/yamjard_53p/padlet-413qunjz75h2rwdw"
                 frameborder="0"
                 allowfullscreen
+                width="100%"
+                height="100%"
               ></iframe>
             </UCard>
           </div>
