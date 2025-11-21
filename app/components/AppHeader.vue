@@ -1,9 +1,18 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10"
-  >
+  <UHeader>
+    <template #left>
+      <NuxtLink to="/">
+        <UAvatar
+          src="https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/logo.png"
+          alt="Logo"
+          class="w-10 h-10"
+        />
+      </NuxtLink>
+      <TemplateMenu />
+    </template>
+
     <UNavigationMenu
       :items="[
         {
@@ -16,16 +25,27 @@
         },
       ]"
       variant="link"
-      color="neutral"
-      class="bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
-      :ui="{
-        link: 'px-2 py-1',
-        linkLeadingIcon: 'hidden',
-      }"
-    >
-      <template #list-trailing>
-        <ColorModeButton />
-      </template>
-    </UNavigationMenu>
-  </div>
+    />
+
+    <template #right>
+      <ColorModeButton />
+    </template>
+    <template #body>
+      <UNavigationMenu
+        orientation="vertical"
+        class="-mx-2.5"
+        :items="[
+          {
+            label: 'หน้าหลัก',
+            to: '/',
+          },
+          {
+            label: 'บทเรียน',
+            to: '/courses',
+          },
+        ]"
+        variant="link"
+      />
+    </template>
+  </UHeader>
 </template>
