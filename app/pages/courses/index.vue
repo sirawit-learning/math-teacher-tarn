@@ -2,8 +2,7 @@
 useSeoMeta({
   title: "บทเรียน",
   description: "บทเรียน",
-  ogImage:
-    "https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/background-1.jpg",
+  ogImage: "https://math-teacher-tarn.vercel.app/images/background-1.jpg",
 });
 </script>
 <template>

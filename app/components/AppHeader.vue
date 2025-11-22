@@ -5,7 +5,7 @@
     <template #left>
       <NuxtLink to="/">
         <UAvatar
-          src="https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/logo.png"
+          src="https://math-teacher-tarn.vercel.app/images/logo.png"
           alt="Logo"
           class="w-10 h-10"
         />

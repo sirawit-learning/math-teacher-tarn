@@ -2,14 +2,13 @@
 useSeoMeta({
   title: "โจทย์ปัญหาการลบ",
   description: "โจทย์ปัญหาการลบ",
-  ogImage:
-    "https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/background-1.jpg",
+  ogImage: "https://math-teacher-tarn.vercel.app/images/background-1.jpg",
 });
 </script>
 <template>
   <div class="flex flex-col">
     <NuxtImg
-      src="https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/background-1.jpg"
+      src="https://math-teacher-tarn.vercel.app/images/background-1.jpg"
       alt="Banner"
       class="w-full"
     />

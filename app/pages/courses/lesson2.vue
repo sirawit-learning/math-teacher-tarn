@@ -27,15 +27,14 @@ const items = [
 useSeoMeta({
   title: "การเปรียบเทียบหาความแตกต่าง",
   description: "การเปรียบเทียบหาความแตกต่าง",
-  ogImage:
-    "https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/lesson2.png",
+  ogImage: "https://math-teacher-tarn.vercel.app/images/lesson2.png",
 });
 </script>
 <template>
   <div class="m-4 flex flex-col gap-4" v-if="!route.hash">
     <UBreadcrumb :items="items" />
     <NuxtImg
-      src="https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/lesson2.png"
+      src="https://math-teacher-tarn.vercel.app/images/lesson2.png"
       alt="Lesson"
       class="w-full rounded-lg shadow"
     />

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          href: "https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/logo.png",
+          href: "https://math-teacher-tarn.vercel.app/images/logo.png",
         },
       ],
     },

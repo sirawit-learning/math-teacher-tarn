@@ -5,7 +5,7 @@ const courses = computed(() => {
     return {
       ...item,
       title: item.title,
-      image: `https://ncrsgvuccmyxefxhnqko.supabase.co/storage/v1/object/public/tarn/lesson${
+      image: `https://math-teacher-tarn.vercel.app/images/lesson${
         index + 1
       }.png`,
     };
