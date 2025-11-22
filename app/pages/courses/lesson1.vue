@@ -8,10 +8,12 @@ const test = computed(() => {
     {
       title: "แบบทดสอบที่ 1",
       to: "https://www.liveworksheets.com/c?a=s&g=%E0%B8%9B.3&s=math&t=fnEyx4KoqY&mn=xz&sr=n&l=f6&i=odoufos&r=xq&f=dzdfuuuf&ms=uz&cd=pel-im9-jt-mgle1jnjxejpmtngnexxxexg&mw=hs",
+      image: "https://math-teacher-tarn.vercel.app/images/test-1.png",
     },
     {
       title: "แบบทดสอบที่ 2",
       to: "https://www.liveworksheets.com/c?a=s&g=%E0%B8%9B.3&s=math&t=fnEyx4KoqY&mn=xz&sr=n&l=yp&i=odouctf&r=ud&f=dzdfuuuf&ms=uz&cd=pel-im9-jt-mglihjnjxkzexnngnexxxexg&mw=hs",
+      image: "https://math-teacher-tarn.vercel.app/images/test-2.png",
     },
   ];
 });
@@ -156,16 +158,45 @@ useSeoMeta({
     <h3 class="text-xl font-semibold">
       ให้นักเรียนสร้างแบบจำลองความคิดจากโจทย์ปัญหาการลบ
     </h3>
-    <UButton
-      to="https://kleki.com/"
-      target="_blank"
-      color="neutral"
-      class="w-fit"
-      trailing-icon="i-lucide-arrow-right"
-      size="xl"
+    <div class="flex flex-col">
+      <NuxtLink to="https://kleki.com/" target="_blank">
+        <NuxtImg
+          src="https://math-teacher-tarn.vercel.app/images/simulation.png"
+          alt="Kleki"
+          class="w-full"
+        />
+      </NuxtLink>
+      <UButton
+        to="https://kleki.com/"
+        target="_blank"
+        color="neutral"
+        class="w-fit mx-auto"
+        trailing-icon="i-lucide-arrow-right"
+        size="xl"
+      >
+        เริ่มสร้างแบบจำลองความคิด
+      </UButton>
+    </div>
+    <USeparator class="my-6" />
+    <h3 class="text-xl font-semibold">
+      ให้นักเรียนตอบคำถามหลังจากรับชมวิดีโอโจทย์ปัญหาการลบ การหาจำนวนที่เหลือ
+    </h3>
+    <UCard
+      :ui="{
+        root: ' h-[80dvh] sm:aspect-video',
+        body: 'p-0!',
+      }"
     >
-      เริ่มสร้างแบบจำลองความคิด
-    </UButton>
+      <iframe
+        class="h-[80dvh] sm:aspect-video"
+        src="https://padlet.com/yamjard_53p/padlet-slubtdshlbeib2em"
+        frameborder="0"
+        allowfullscreen
+        width="100%"
+        height="100%"
+      ></iframe>
+    </UCard>
+
     <USeparator />
     <div class="flex flex-col sm:flex-row justify-between gap-4">
       <UButton
@@ -197,22 +228,26 @@ useSeoMeta({
     <h2 class="text-3xl font-bold">
       ภารกิจพิชิตโจทย์ปัญหาการลบ การหาจำนวนที่เหลือ
     </h2>
-    <h3 class="text-xl font-semibold mt-2">
-      ให้นักเรียนรับชมวิดีโอโจทย์ปัญหาการลบ การหาจำนวนที่เหลือ
-    </h3>
     <div class="flex flex-col gap-4">
-      <div class="flex flex-col gap-2" v-for="item in test" :key="item.title">
-        <h3 class="text-xl">{{ item.title }}</h3>
+      <div
+        class="flex flex-col"
+        v-for="(item, index) in test"
+        :key="item.title"
+      >
+        <NuxtLink :to="item.to" target="_blank">
+          <NuxtImg :src="item.image" :alt="item.title" class="w-full" />
+        </NuxtLink>
         <UButton
           :to="item.to"
           target="_blank"
           color="neutral"
-          class="w-fit"
+          class="w-fit mx-auto"
           trailing-icon="i-lucide-arrow-right"
           size="xl"
         >
-          เริ่มทำแบบทดสอบ
+          เริ่มทำ {{ item.title }}
         </UButton>
+        <USeparator class="my-6" v-if="index !== test.length - 1" />
       </div>
     </div>
     <USeparator />
