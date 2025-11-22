@@ -7,12 +7,12 @@ const test = computed(() => {
   return [
     {
       title: "แบบทดสอบที่ 1",
-      to: "https://www.liveworksheets.com/th/c?a=s&g=%E0%B8%9B.3&s=math&t=fnEyx4KoqY&mn=xz&sr=n&l=jf&i=odouxss&r=g2&f=dzdfuuuf&ms=uz&cd=pel-im9-jt-mglqejnjxmppb5ngnexxxexg&mw=hs",
+      to: "https://www.liveworksheets.com/th/c?a=s&g=%E0%B8%9B.3&s=math&t=fnEyx4KoqY&mn=xz&sr=n&l=df&i=odouxxo&r=sj&f=dzdfuudd&ms=uz&cd=pel-im9-jt-mglnejnjxmmjpqngnexxnnxg&mw=hs",
       image: "https://math-teacher-tarn.vercel.app/images/test-1.png",
     },
     {
       title: "แบบทดสอบที่ 2",
-      to: "https://www.liveworksheets.com/th/c?a=s&g=%E0%B8%9B.3&s=math&t=fnEyx4KoqY&mn=xz&sr=n&l=mh&i=odoufzs&r=v9&f=dzdfuuuf&ms=uz&cd=pel-im9-jt-mglvwjnjxegpy4ngnexxxexg&mw=hs",
+      to: "https://www.liveworksheets.com/th/c?a=s&g=%E0%B8%9B.3&s=math&t=fnEyx4KoqY&mn=xz&sr=n&l=qm&i=odozoxz&r=yx&f=dzdfuudd&ms=uz&cd=pel-im9-jt-mgltvjnjgjmgimngnexxnnxg&mw=hs",
       image: "https://math-teacher-tarn.vercel.app/images/test-2.png",
     },
   ];
